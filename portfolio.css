@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --cactus: #506C60;
+    --beige: #E6D1B4;
+    --orangeLogo: #cd6b41;
+    --grey: rgb(88, 88, 88);
+    --typoTitre: Plus Jakarta Sans;
+    --lineHeightTitre: 30px;
+    --lineHeightTexte: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Plus Jakarta Sans;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+
+}
+body{
+    font-size: 1.6rem;
+}
+@media (min-width: 780px) and (max-width: 800px) {
+    #logoMain {
+        max-width: 80px;
+        margin: 2rem 4rem;
+    }
+
+    nav {
+        padding: 2rem;
+        right: 8rem;
+    }
+
+    .btnCv {
+        padding: 1.5rem 4rem;
+        margin: 3rem 0 8rem;
+        font-size: 18px;
+    }
+
+    .imgFille {
+        right: 20rem;
+        top: 10rem;
+        width: 300px;
+    }
+
+    .titreMoi {
+        padding: 7rem 10rem 7rem 25rem;
+    }
+
+    .titreMoi p {
+        font-size: 18px;
+        padding: 4rem 0 0 0;
+    }
+
+    .aPropos, .mesServices, .mesProjets, .meContacter {
+        padding: 7rem 15rem;
+    }
+
+    .cardsContainer {
+        gap: 10px;
+    }
+
+    .cardProjet, .card {
+        width: 45%;
+    }
+
+    .logoSkills {
+        right: 10rem;
+        top: 150px;
+        width: 350px;
+    }
+
+    .formulaire {
+        padding: 1.5rem;
+    }
+    .aPropos {
+        padding: 2rem 5rem;
+    }
+}
+
+#logoMain {
+    max-width: 150px;
+    margin: 2rem 5rem;
+}
+header {
+    background-color: var(--cactus);
+    min-height: 10vh;
+}
+nav {
+    background-color: var(--cactus);
+    margin: 0 10rem;
+}
+nav ul {
+    background-color: var(--cactus);
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+nav a {
+    padding: 3rem;
+    display: block;
+    text-decoration: none;
+    color: var(--beige);
+}
+nav a:hover {
+    color: var(--orangeLogo);
+    transform: translate(-0.25rem, 0.25rem);
+}
+header div.flexContainer {
+    justify-content: space-between;
+    align-items: center;
+}
+/**bouton CV avec hover**/
+.btnCV {
+    display: inline-block;
+    transition: all 0.3s ease-in;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #E6D1B4;
+    padding: 1em 2em;
+    cursor: pointer;
+    font-size: 22px;
+    border-radius: 0.3em;
+    background: #cd6b41;
+    border: 1px solid var(--orangeLogo);
+    margin: 50px 0;
+}
+  .btnCV:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5;
+  }
+  .btnCV:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: #E6D1B4;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+  }
+  
+  .btnCV:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #E6D1B4;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+  }
+  
+  .btnCV:hover {
+    color: #cd6b41;
+    border: 1px solid #E6D1B4;
+  }
+  
+  .btnCV:hover:before {
+    top: -35%;
+    background-color: #E6D1B4;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+  .btnCV:hover:after {
+    top: -45%;
+    background-color: #E6D1B4;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+    
+.imgFille {
+    flex: 1;
+    max-width: 35%;
+    min-width: 200px;
+    order: 2;
+
+}
+.heroSection {
+    background-color: var(--cactus);
+    color: var(--beige);
+    padding: 0rem 20rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.nomPrenom{
+        min-width: 200px;
+        flex: 1;
+    }
+.heroSection p {
+    order: 3;
+}
+h1 {
+    color: var(--beige);
+    font-size: 50px;
+    text-transform: uppercase;
+}  
+h2 {
+    color: var(--beige);
+}   
+h3 {
+    text-transform: uppercase;
+    padding: 0rem 1rem 4rem 0rem;
+    font-size: var(--lineHeightTitre);
+}
+h4 {
+    text-transform: uppercase;
+    font-size: 25px;
+}
+p{
+    max-width: 960px;
+    font-size: var(--lineHeightTexte)
+}
+li {
+    font-size: 18px;
+}
+.flexContainer {
+    display: flex;
+    flex-flow: row wrap; 
+    }
+.uiux {
+    color: var(--orangeLogo);
+    }
+
+.aPropos {
+    background-color: var(--beige);
+    color: var(--cactus);
+    padding: 15rem 20rem 15rem 20rem;
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    position: relative;
+    flex: 1;
+}
+.containerCards{
+    background-color: var(--beige);
+    display: flex;
+    justify-content: space-between;
+  }
+
+.textDescritpion1{
+    background-color: var(--beige);
+    width: 90%;
+    flex: 1;
+    flex-direction: column;
+  }
+.textDescritpion2 {
+    flex: 1 ;
+    width: 90%;
+    padding-top: 40px;
+}
+ .logoSkills {
+    background-color: var(--beige);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 350px;
+    max-height: 350px;
+  }
+  .logoSkills figure img {
+    flex: 1 0 calc(33.333% - 10px); /* Chaque figure prend environ un tiers de la ligne */
+    margin: 10px; 
+    width: 70px;
+  }
+  /** CSS POUR LES CARTES UIUXDEV **/
+.mesServices {
+    background-color: var(--cactus);
+    color: var(--beige);
+    padding: 15rem 20rem 15rem 20rem;
+    position: relative;   
+}
+.containerCardUI{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    font-family: roboto;
+  }
+  .titleCarte {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid var(--orangeLogo);
+    border-radius: 1rem;
+  }
+  .flip-card-front {
+    background: linear-gradient(120deg, #ffe4c4 60%, #ffe7de 88%,
+    #E6D1B4 40%, #cd6b41 48%);
+    color: var(--orangeLogo);
+  }
+  .flip-card-back {
+    background: linear-gradient(120deg, #cd6b41 88%,
+    #E6D1B4 40%);
+    color: #E6D1B4;
+    transform: rotateY(180deg);
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    padding: 15px;
+  }
+ .logoCarte {
+    max-width: 150px;
+    margin: 50px 80px;
+ }
+.mesProjets {
+    background-color: var(--beige);
+    color: var(--cactus);
+    padding: 15rem 20rem 15rem 20rem;
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    background-size: 50%;
+    position: relative;
+}
+.cardsContainer {
+    display: flex;
+    gap: 20px; 
+    justify-content: space-between; 
+    align-items: center;
+}
+.cardProjets {
+    position: relative;
+    width: 450px;
+    aspect-ratio: 16/9;
+    background-color: var(--orangeLogo);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 2px var(--cactus);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .cardSvg {
+    width: 100%;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+   .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card_content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: var(--beige);
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .cardProjets:hover .card_content {
+    transform: rotateX(0deg);
+  }
+  
+  .card_title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--cactus);
+  }
+  
+  .cardProjets:hover svg {
+    scale: 0;
+  }
+  
+  .card_description {
+    margin: 10px 0 10px;
+    font-size: 20px;
+    color: var(--cactus);
+    line-height: 1.2;
+  }
+  
+  .card_button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: var(--orangeLogo);
+    border: none;
+    color: var(--beige);
+    border: 1px solid var(--orangeLogo);
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+  }
+  .card_button:hover {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: var(--beige);
+    border: none;
+    color: var(--orangeLogo);
+    border: 1px solid var(--orangeLogo);
+  }
+  /** CSS DU FOOTER**/
+.meContacter {
+    background-color: var(--cactus);
+    color: var(--beige);
+    padding: 10rem 20rem 10rem 20rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.meContacter h3 {
+    align-self: flex-start;
+    margin: 0;
+
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+    margin: 0;
+}
+
+.contact-info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+.formulaire {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-info li, .contact-info img {
+    margin-bottom: 10px;
+}
+.formulaire ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.formulaire li {
+    margin-bottom: 10px;
+}
+
+.formulaire input, .formulaire textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulaire textarea {
+    height: 100px;
+}
+.iconeFooter {
+    width: 50px;
+}
+.btnSubmit{
+    background-color: var(--orangeLogo);
+    color: var(--beige);
+    border: none;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.4s ease;
+    align-self: center;
+    font-size: 20px;
+    border: 1px solid var(--orangeLogo);
+}
+.btnSubmit:hover {
+    background-color: var(--beige); 
+    color: var(--orangeLogo);
+    border: 1px solid var(--orangeLogo);
+} 
+
+.triangle {
+    height: 0;
+    width: 0;
+    background-color: var(--cactus);
+    border-right: 800px solid transparent;
+    border-bottom: 100px solid var(--beige);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
