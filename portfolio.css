@@ -23,63 +23,6 @@ html {
 body{
     font-size: 1.6rem;
 }
-@media (min-width: 780px) and (max-width: 800px) {
-    #logoMain {
-        max-width: 80px;
-        margin: 2rem 4rem;
-    }
-
-    nav {
-        padding: 2rem;
-        right: 8rem;
-    }
-
-    .btnCv {
-        padding: 1.5rem 4rem;
-        margin: 3rem 0 8rem;
-        font-size: 18px;
-    }
-
-    .imgFille {
-        right: 20rem;
-        top: 10rem;
-        width: 300px;
-    }
-
-    .titreMoi {
-        padding: 7rem 10rem 7rem 25rem;
-    }
-
-    .titreMoi p {
-        font-size: 18px;
-        padding: 4rem 0 0 0;
-    }
-
-    .aPropos, .mesServices, .mesProjets, .meContacter {
-        padding: 7rem 15rem;
-    }
-
-    .cardsContainer {
-        gap: 10px;
-    }
-
-    .cardProjet, .card {
-        width: 45%;
-    }
-
-    .logoSkills {
-        right: 10rem;
-        top: 150px;
-        width: 350px;
-    }
-
-    .formulaire {
-        padding: 1.5rem;
-    }
-    .aPropos {
-        padding: 2rem 5rem;
-    }
-}
 
 #logoMain {
     max-width: 150px;
@@ -199,7 +142,7 @@ header div.flexContainer {
         min-width: 200px;
         flex: 1;
     }
-.heroSection p {
+.heroSection p{
     order: 3;
 }
 h1 {
@@ -260,7 +203,7 @@ li {
     width: 90%;
     padding-top: 40px;
 }
- .logoSkills {
+.logoSkills {
     background-color: var(--beige);
     display: flex;
     flex-wrap: wrap;
@@ -268,10 +211,11 @@ li {
     max-width: 350px;
     max-height: 350px;
   }
-  .logoSkills figure img {
+.logoSkills figure img {
     flex: 1 0 calc(33.333% - 10px); /* Chaque figure prend environ un tiers de la ligne */
     margin: 10px; 
     width: 70px;
+
   }
   /** CSS POUR LES CARTES UIUXDEV **/
 .mesServices {
@@ -539,4 +483,68 @@ li {
     position: absolute;
     top: 0;
     right: 0;
+}
+
+@media (min-width: 300px) and (max-width:960px) {
+    nav {
+        margin: 0 2rem;
+        display: none;
+    }
+    #logoMain {
+        max-width: 100px;
+    }
+    p {
+        text-align: center;
+    }
+    .logoSkills {
+    flex-direction: column;
+    width: 5px;
+    background-color: var(--beige);
+    max-width: 200px;
+    max-height: 300px;
+    margin: 15px 10px;
+    align-items: center;
+    }
+    .logoSkills figure img{
+    width: 45px;
+    align-items: center;
+    }
+    .heroSection {
+        padding: 5rem 5rem;
+        flex-direction: column;
+    }
+    .aPropos {
+        padding: 5rem 5rem;
+        align-items: center;
+    }
+    .mesServices {
+        padding: 5rem 5rem;
+        align-items: center;
+    }
+    .mesProjets {
+        padding: 5rem 5rem;
+    }
+    .meContacter {
+        padding: 5rem 5rem;
+        flex-direction: column;
+    }
+    .containerCardUI, .containerCards, .cardsContainer {
+        flex-direction: column;
+        align-items: stretch;
+
+    }
+    .cardProjets {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .btnCV, .btnSubmit, .card_button {
+        transition: none;
+    }
+    .flip-card:hover .flip-card-inner,
+    .cardProjets:hover svg,
+    .cardProjets:hover .card_content {
+        transform: none;
+    }
 }
